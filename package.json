@@ -5,7 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "build": "webpack --mode development",
-    "start": "node server/index.js",
+    "start": "npm run build && node server/index.js",
     "less": "lessc src/css/style.less dist/css/style.css",
     "lint": "eslint .",
     "test": "npm run build && mocha test/.setup.js test/*.spec.js --exit"
@@ -60,5 +60,10 @@
     "type": "git",
     "url": "git://"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": "14.18.1",
+    "npm": "6.14.15"
+
+  }
 }
